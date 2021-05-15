@@ -12,7 +12,10 @@ class _sefareshState extends State<sefaresh> {
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Colors.green,
           items: [
-            BottomNavigationBarItem(icon: Icon(Icons.add))
+            BottomNavigationBarItem(icon: Icon(Icons.add),
+            label: "+"),
+            BottomNavigationBarItem(icon: Icon(Icons.add_moderator),
+            label: "-")
           ],
 
         ),
