@@ -1,3 +1,4 @@
+import 'package:customer/sefaresh.dart';
 import 'package:flutter/material.dart';
 import 'package:customer/first%20page.dart';
 import 'package:customer/login.dart';
@@ -21,6 +22,7 @@ class _myappState extends State<myapp> {
         "/login" : (context) => Login(),
         "sign up" : (context) => Signup(),
         "first page":(context)=> Firstpage(),
+        "sefaresh":(context)=> sefaresh(),
       },
       home: Firstpage(),
     );
