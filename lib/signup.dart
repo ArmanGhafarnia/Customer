@@ -93,6 +93,7 @@ class _SignupState extends State<Signup> {
                   ),
                   Padding(padding:(EdgeInsets.symmetric(vertical: 20)) ),
                   TextFormField(
+
                     obscureText: visible,
                     onSaved: (String voroodi){
                       User.users[User.users.length-1].password=voroodi;
