@@ -89,6 +89,7 @@ class _SignupState extends State<Signup> {
 
                       return null;
                     },
+
                   ),
                   Padding(padding:(EdgeInsets.symmetric(vertical: 20)) ),
                   TextFormField(
