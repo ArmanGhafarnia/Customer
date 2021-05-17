@@ -1,4 +1,4 @@
-import 'package:customer/sefaresh.dart';
+import 'package:customer/safhe%20profile.dart';
 import 'package:flutter/material.dart';
 import 'package:customer/first%20page.dart';
 import 'package:customer/login.dart';
@@ -6,7 +6,7 @@ import 'package:customer/signup.dart';
 import 'package:customer/first page.dart';
 
 void main() {
-  runApp(myapp());
+  runApp(safhe_profile());
 }
 
 class myapp extends StatefulWidget {
@@ -22,7 +22,6 @@ class _myappState extends State<myapp> {
         "/login" : (context) => Login(),
         "sign up" : (context) => Signup(),
         "first page":(context)=> Firstpage(),
-        "sefaresh":(context)=> sefaresh(),
       },
       home: Firstpage(),
     );
