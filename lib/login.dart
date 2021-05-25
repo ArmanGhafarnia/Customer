@@ -52,7 +52,7 @@ class _LoginState extends State<Login> {
                 TextFormField(
                   obscureText: visible,
                   onSaved: (String voroodi){
-                    print('a');
+                    User.users[andis].use=true;
                   },
                   validator: (String voroodi){
                     if(voroodi==null||voroodi.isEmpty)
@@ -96,7 +96,7 @@ class _LoginState extends State<Login> {
                       if(f.currentState.validate())
                         setState(() {
                           f.currentState.save();
-                         //  Navigator.pushNamed(context,"sefaresh");
+                        //  Navigator.pushNamed(context,"sefaresh");
                         });
 
                     },

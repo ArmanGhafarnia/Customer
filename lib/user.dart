@@ -1,5 +1,5 @@
 class User{
-  int i ;
+  bool use = false;
   String name;
   String lastname;
   int phone;
