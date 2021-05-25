@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:customer/login.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Firstpage extends StatefulWidget {
   @override
@@ -11,16 +12,59 @@ class _FirstpageState extends State<Firstpage> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-        backgroundColor: Color(0xffffffff),
+        backgroundColor: Colors.white,
         body: Column(
           children: [
             Container(
               child: Image.asset("photo/2.png"),
-              padding: EdgeInsets.symmetric(vertical: 80,horizontal: 30),
+              padding: EdgeInsets.fromLTRB(30 , 130, 30, 170)
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Row(
+                  children: [
+                    Icon(Icons.fastfood ,color: Color(0xffef2a2a) , size: 40 ),
+                    Text(" Finger\n Licking Good",
+                      style: TextStyle(
+                          fontSize: 15,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.black
+                      ),
+                    )
+                  ]
+                ),
+                Row(
+                    children: [
+                      Icon(FontAwesomeIcons.percentage ,color: Color(0xffef2a2a), size: 40 ),
+                      Text(" Great\n Deals & Offer",
+                        style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.black
+                        ),
+                      )
+                    ]
+                ),
+                Row(
+                    children: [
+                      Icon( FontAwesomeIcons.mobile ,color: Color(0xffef2a2a), size: 40 ),
+                      Text(" Easy\n Ordering",
+                        style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.black
+                        ),
+                      )
+                    ]
+
+                )
+              ],
+
             ),
             Column(
               children: [
-                Padding(padding:(EdgeInsets.symmetric(vertical: 100)) ),
+                Padding(padding:(EdgeInsets.symmetric(vertical: 45)) ),
                 Container(
                   height: 50,
                   width: 300,
@@ -59,7 +103,6 @@ class _FirstpageState extends State<Firstpage> {
                     },
                   ),
                 ),
-
               ],
             )
           ],
