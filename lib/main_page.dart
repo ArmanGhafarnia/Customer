@@ -10,7 +10,11 @@ class _main_pageState extends State<main_page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       appBar: ,
+      // bottomNavigationBar: BottomNavigationBar(
+      //   elevation: 10,
+      //
+      //
+      // ),
     );
   }
 }
