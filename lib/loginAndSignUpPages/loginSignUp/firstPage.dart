@@ -2,12 +2,12 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class Firstpage extends StatefulWidget {
+class firstPage extends StatefulWidget {
   @override
-  _FirstpageState createState() => _FirstpageState();
+  _firstPageState createState() => _firstPageState();
 }
 
-class _FirstpageState extends State<Firstpage> {
+class _firstPageState extends State<firstPage> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(

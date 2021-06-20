@@ -1,5 +1,6 @@
+import 'package:customer/ProfileAndUsers/profile.dart';
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/asus/Desktop/git/Customer/lib/ProfileAndUsers/profile.dart';
+
 class safhe_profile extends StatefulWidget {
   @override
   _safhe_profileState createState() => _safhe_profileState();

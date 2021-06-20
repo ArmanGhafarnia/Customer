@@ -1,4 +1,5 @@
-import 'file:///C:/Users/asus/Desktop/git/Customer/lib/ProfileAndUsers/users/user.dart';
+import 'package:customer/ProfileAndUsers/users/user.dart';
+
 class Profile{
   User feli ;
   String name ;

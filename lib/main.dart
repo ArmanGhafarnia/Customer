@@ -1,13 +1,11 @@
-import 'file:///C:/Users/asus/Desktop/git/Customer/lib/inAppPages//main_Page.dart';
-import 'file:///C:/Users/asus/Desktop/git/Customer/lib/loginAndSignUpPages/splash_Screen.dart';
-import 'file:///C:/Users/asus/Desktop/git/Customer/lib/loginAndSignUpPages/loginSignUp/login.dart';
-import 'file:///C:/Users/asus/Desktop/git/Customer/lib/loginAndSignUpPages/loginSignUp/signup.dart';
-import 'file:///C:/Users/asus/Desktop/git/Customer/lib/loginAndSignUpPages/loginSignUp/first%20page.dart';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'inAppPages/main_Page.dart';
+import 'loginAndSignUpPages/loginSignUp/firstPage.dart';
+import 'loginAndSignUpPages/loginSignUp/login.dart';
+import 'loginAndSignUpPages/loginSignUp/signup.dart';
+import 'loginAndSignUpPages/splash_Screen.dart';
 
 void main() {
   runApp(myapp());
@@ -33,7 +31,7 @@ class _myappState extends State<myapp> {
       routes: {
         "/login" : (context) => Login(),
         "sign up" : (context) => Signup(),
-        "first page":(context)=> Firstpage(),
+        "first page":(context)=> firstPage(),
         "splash screen" : (context) => splash_Screen(),
         "main page" : (context) => main_Page()
 

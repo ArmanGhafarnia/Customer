@@ -1,4 +1,4 @@
-import 'file:///C:/Users/asus/Desktop/git/Customer/lib/ProfileAndUsers/users/user.dart';
+import 'package:customer/ProfileAndUsers/users/user.dart';
 import 'package:flutter/material.dart';
 
 class Signup extends StatefulWidget {
