@@ -11,7 +11,7 @@ class splash_Screen extends StatefulWidget {
 
 // ignore: camel_case_types
 class _splash_ScreenState extends State<splash_Screen> {
-  var token = false;
+  bool token = true;
 
   startTime() {
     var _duration = Duration(seconds: 5);
@@ -19,7 +19,7 @@ class _splash_ScreenState extends State<splash_Screen> {
   }
 
   navigationPage() {
-    String pageName = token ? "home page" : "first page";
+    String pageName = token ? "main page" : "first page";
     Navigator.of(context).pushNamed(pageName);
   }
 
