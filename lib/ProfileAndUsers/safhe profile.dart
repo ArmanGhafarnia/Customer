@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:customer/profile.dart';
+import 'file:///C:/Users/asus/Desktop/git/Customer/lib/ProfileAndUsers/profile.dart';
 class safhe_profile extends StatefulWidget {
   @override
   _safhe_profileState createState() => _safhe_profileState();
@@ -40,7 +40,7 @@ class _safhe_profileState extends State<safhe_profile> {
                            border: OutlineInputBorder()
                        ),
                        onSaved: (String voroodi){
-                         int voroodii=int.parse(voroodi);
+                         int voroodii =int.parse(voroodi);
                          //  moshtari.credit+=voroodii;
                        },
                      ),

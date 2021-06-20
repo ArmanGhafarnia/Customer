@@ -1,12 +1,11 @@
-import 'package:customer/main_Page.dart';
-import 'package:customer/splash_Screen.dart';
+import 'file:///C:/Users/asus/Desktop/git/Customer/lib/inAppPages//main_Page.dart';
+import 'file:///C:/Users/asus/Desktop/git/Customer/lib/loginAndSignUpPages/splash_Screen.dart';
+import 'file:///C:/Users/asus/Desktop/git/Customer/lib/loginAndSignUpPages/loginSignUp/login.dart';
+import 'file:///C:/Users/asus/Desktop/git/Customer/lib/loginAndSignUpPages/loginSignUp/signup.dart';
+import 'file:///C:/Users/asus/Desktop/git/Customer/lib/loginAndSignUpPages/loginSignUp/first%20page.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:customer/first%20page.dart';
-import 'package:customer/login.dart';
-import 'package:customer/signup.dart';
-import 'package:customer/first page.dart';
-import 'package:customer/splash_Screen.dart' ;
 import 'package:google_fonts/google_fonts.dart';
 
 

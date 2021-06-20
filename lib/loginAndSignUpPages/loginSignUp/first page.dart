@@ -1,6 +1,5 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:customer/login.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Firstpage extends StatefulWidget {
