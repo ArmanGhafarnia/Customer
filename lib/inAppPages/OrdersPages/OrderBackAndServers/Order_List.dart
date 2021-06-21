@@ -3,6 +3,7 @@
 // ignore: camel_case_types
 class Order_Item {
 
+  String foodName;
 
   String restaurantName;
 
@@ -18,7 +19,8 @@ class Order_Item {
 
 
   Order_Item(
-      { this.restaurantName ,
+      { this.foodName,
+        this.restaurantName ,
         this.restaurantAvatarUrl,
         this.orderDate,
         this.orderPrice,
