@@ -1,3 +1,4 @@
+import 'package:customer/inAppPages/OrdersPages/restaurant.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -36,7 +37,7 @@ class _myappState extends State<myapp> {
         "main page" : (context) => main_Page()
 
       },
-      home: splash_Screen(),
+      home: reastaurant(),
     );
   }
 }
