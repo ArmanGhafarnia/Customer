@@ -48,7 +48,28 @@ class _reastaurantState extends State<reastaurant> {
                       ),),
                     ),
                   ),
+
                 ),
+                Padding(
+                    padding: EdgeInsets.all(11),
+                        child: Container(
+                          height: 30,
+                          width: 70,
+                          color: Color(0xff0cbbb0),
+                          child: ElevatedButton(
+                            onPressed: (){
+                              setState(() {
+                                Navigator.pushNamed(context,"arman_restaurant_page");
+                              });
+                            },
+                            child: Text("ENTER",style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w400
+                            ),),
+                          ),
+                        ),
+                )
               ],
             ),
 

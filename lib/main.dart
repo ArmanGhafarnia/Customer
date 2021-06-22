@@ -1,4 +1,7 @@
+import 'package:customer/inAppPages/restaurant/amir_restaurant_page.dart';
+import 'package:customer/inAppPages/restaurant/arman_restaurant_page.dart';
 import 'package:customer/inAppPages/restaurant/restaurant.dart';
+import 'package:customer/inAppPages/restaurant/third_restaurant_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'inAppPages/main_Page.dart';
@@ -33,8 +36,10 @@ class _myappState extends State<myapp> {
         "sign up" : (context) => Signup(),
         "first page":(context)=> firstPage(),
         "splash screen" : (context) => splash_Screen(),
-        "main page" : (context) => main_Page()
-
+        "main page" : (context) => main_Page(),
+        "arman_restaurant_page" : (context)=> arman_restaurant_page(),
+        "amir_restaurant_page" : (context)=> amir_restaurant_page(),
+        "third_restaurant_page" : (context)=> third_restaurant_page(),
       },
       home: splash_Screen(),
     );
