@@ -1,11 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-class reastaurant extends StatefulWidget {
+class restaurant3 extends StatefulWidget {
   @override
-  _reastaurantState createState() => _reastaurantState();
+  _restaurant3State createState() => _restaurant3State();
 }
 
-class _reastaurantState extends State<reastaurant> {
+class _restaurant3State extends State<restaurant3> {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -16,8 +15,8 @@ class _reastaurantState extends State<reastaurant> {
             height: 120,
             width: 350,
             decoration: BoxDecoration(
-              border: Border.all(),
-                  borderRadius: BorderRadius.circular(15)
+                border: Border.all(),
+                borderRadius: BorderRadius.circular(15)
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -27,14 +26,14 @@ class _reastaurantState extends State<reastaurant> {
                   child: Container(
                     height: 70,
                     width: 80,
-                    child: Image.network("https://cdn1.iconfinder.com/data/icons/supermarket-cafe-and-stores/50/42-512.png"),
+                    child: Image.network("https://cdn1.vectorstock.com/i/1000x1000/33/80/fast-food-shop-store-front-flat-style-vector-9183380.jpg"),
                     decoration: BoxDecoration(
                         border: Border.all(),
                         borderRadius: BorderRadius.circular(25)
                     ),
                   ),
                 ),
-                Text("arman"),
+                Text("third"),
                 Padding(
                   padding: const EdgeInsets.all(15),
                   child: Container(
@@ -42,9 +41,9 @@ class _reastaurantState extends State<reastaurant> {
                     width: 50,
                     color: Color(0xff29eb49),
                     child: ElevatedButton(
-                      child: Text("5.2",style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 12
+                      child: Text("3.4",style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 12
                       ),),
                     ),
                   ),
@@ -58,4 +57,3 @@ class _reastaurantState extends State<reastaurant> {
     );
   }
 }
-

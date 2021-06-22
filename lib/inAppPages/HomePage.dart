@@ -1,3 +1,5 @@
+import 'package:customer/inAppPages/restaurant/restaurant2.dart';
+import 'package:customer/inAppPages/restaurant/restaurant3.dart';
 import 'package:customer/inAppPages/restaurant/restaurant_class.dart';
 import 'package:flutter/material.dart';
 import 'package:customer/inAppPages/restaurant/restaurant.dart';
@@ -34,8 +36,8 @@ class _HomePageState extends State<HomePage> {
       body: ListView(
         children: [
           reastaurant(),
-          reastaurant(),
-          reastaurant()
+          restaurant2(),
+          restaurant3()
         ]
       ),
     );
