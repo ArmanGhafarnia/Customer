@@ -14,6 +14,18 @@ class _arman_restaurant_pageState extends State<arman_restaurant_page> {
           fontStyle: FontStyle.italic
         ),),
       ),
+      body: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 100,vertical: 20),
+            child: Container(
+              height: 250,
+              width: 200,
+              child: Image.network("https://cdn1.iconfinder.com/data/icons/supermarket-cafe-and-stores/50/42-512.png"),
+            ),
+          )
+        ],
+      )
     );
   }
 }

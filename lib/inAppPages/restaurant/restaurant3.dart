@@ -25,7 +25,7 @@ class _restaurant3State extends State<restaurant3> {
                     child: Image.network("https://cdn1.vectorstock.com/i/1000x1000/33/80/fast-food-shop-store-front-flat-style-vector-9183380.jpg"),
                   ),
                 ),
-                Text("Third",style: TextStyle(
+                Text("Rabin",style: TextStyle(
                   fontSize: 20
                 ),),
                 Padding(
@@ -53,7 +53,7 @@ class _restaurant3State extends State<restaurant3> {
                       ),
                       onPressed: (){
                         setState(() {
-                          Navigator.pushNamed(context,"third_restaurant_page");
+                          Navigator.pushNamed(context,"rabin_restaurant_page");
                         });
                       },
                       child: Text("ENTER",style: TextStyle(
