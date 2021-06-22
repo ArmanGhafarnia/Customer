@@ -1,5 +1,6 @@
+import 'package:customer/inAppPages/restaurant/restaurant_class.dart';
 import 'package:flutter/material.dart';
-
+import 'package:customer/inAppPages/restaurant/restaurant.dart';
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -30,6 +31,13 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       drawer: Drawer(),
+      body: ListView(
+        children: [
+          reastaurant(),
+          reastaurant(),
+          reastaurant()
+        ]
+      ),
     );
   }
 }
