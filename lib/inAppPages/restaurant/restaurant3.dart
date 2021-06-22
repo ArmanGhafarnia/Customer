@@ -14,10 +14,6 @@ class _restaurant3State extends State<restaurant3> {
           child: Container(
             height: 120,
             width: 350,
-            decoration: BoxDecoration(
-                border: Border.all(),
-                borderRadius: BorderRadius.circular(15)
-            ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -27,13 +23,11 @@ class _restaurant3State extends State<restaurant3> {
                     height: 70,
                     width: 80,
                     child: Image.network("https://cdn1.vectorstock.com/i/1000x1000/33/80/fast-food-shop-store-front-flat-style-vector-9183380.jpg"),
-                    decoration: BoxDecoration(
-                        border: Border.all(),
-                        borderRadius: BorderRadius.circular(25)
-                    ),
                   ),
                 ),
-                Text("third"),
+                Text("Third",style: TextStyle(
+                  fontSize: 20
+                ),),
                 Padding(
                   padding: const EdgeInsets.all(15),
                   child: Container(
@@ -53,8 +47,10 @@ class _restaurant3State extends State<restaurant3> {
                   child: Container(
                     height: 30,
                     width: 70,
-                    color: Color(0xff0cbbb0),
                     child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Color(0xffeb2a2a),
+                      ),
                       onPressed: (){
                         setState(() {
                           Navigator.pushNamed(context,"third_restaurant_page");

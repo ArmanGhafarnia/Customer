@@ -15,10 +15,6 @@ class _reastaurantState extends State<reastaurant> {
           child: Container(
             height: 120,
             width: 350,
-            decoration: BoxDecoration(
-              border: Border.all(),
-                  borderRadius: BorderRadius.circular(15)
-            ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -29,12 +25,12 @@ class _reastaurantState extends State<reastaurant> {
                     width: 80,
                     child: Image.network("https://cdn1.iconfinder.com/data/icons/supermarket-cafe-and-stores/50/42-512.png"),
                     decoration: BoxDecoration(
-                        border: Border.all(),
-                        borderRadius: BorderRadius.circular(25)
                     ),
                   ),
                 ),
-                Text("arman"),
+                Text("Arman",style: TextStyle(
+                  fontSize: 20
+                ),),
                 Padding(
                   padding: const EdgeInsets.all(15),
                   child: Container(
@@ -55,8 +51,10 @@ class _reastaurantState extends State<reastaurant> {
                         child: Container(
                           height: 30,
                           width: 70,
-                          color: Color(0xff0cbbb0),
                           child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Color(0xffeb2a2a),
+                            ),
                             onPressed: (){
                               setState(() {
                                 Navigator.pushNamed(context,"arman_restaurant_page");

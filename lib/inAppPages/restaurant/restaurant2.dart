@@ -14,10 +14,6 @@ class _restaurant2State extends State<restaurant2> {
           child: Container(
             height: 120,
             width: 350,
-            decoration: BoxDecoration(
-                border: Border.all(),
-                borderRadius: BorderRadius.circular(15)
-            ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -27,13 +23,11 @@ class _restaurant2State extends State<restaurant2> {
                     height: 70,
                     width: 80,
                     child: Image.network("https://cdn1.vectorstock.com/i/1000x1000/81/30/fast-food-restaurant-and-vector-10328130.jpg"),
-                    decoration: BoxDecoration(
-                        border: Border.all(),
-                        borderRadius: BorderRadius.circular(25)
-                    ),
                   ),
                 ),
-                Text("amir"),
+                Text("Amir",style: TextStyle(
+                  fontSize: 20
+                ),),
                 Padding(
                   padding: const EdgeInsets.all(15),
                   child: Container(
@@ -53,8 +47,10 @@ class _restaurant2State extends State<restaurant2> {
                   child: Container(
                     height: 30,
                     width: 70,
-                    color: Color(0xff0cbbb0),
                     child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Color(0xffeb2a2a),
+                      ),
                       onPressed: (){
                         setState(() {
                           Navigator.pushNamed(context,"amir_restaurant_page");
