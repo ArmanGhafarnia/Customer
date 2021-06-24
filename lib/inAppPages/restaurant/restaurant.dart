@@ -23,8 +23,9 @@ class _reastaurantState extends State<reastaurant> {
                   child: Container(
                     height: 70,
                     width: 80,
-                    child: Image.network("https://cdn1.iconfinder.com/data/icons/supermarket-cafe-and-stores/50/42-512.png"),
+                    child: Image.network("https://media.mlive.com/businessreview/western_impact/photo/9639985-large.jpg"),
                     decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(25)
                     ),
                   ),
                 ),
