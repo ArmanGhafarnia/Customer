@@ -4,13 +4,16 @@ class Food{
   String picture;
   String restaurantAvatar;
   double price;
-
+  bool Process;
+  bool active;
   Food({
     this.name,
     this.restaurantName,
     this.picture,
     this.restaurantAvatar,
-    this.price
+    this.price,
+    this.Process,
+    this.active
   }
       );
 

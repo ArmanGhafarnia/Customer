@@ -1,3 +1,5 @@
+import 'package:customer/inAppPages/OrdersPages/process.dart';
+import 'package:customer/inAppPages/food/class%20fake.dart';
 import 'package:flutter/material.dart';
 class amir_restaurant_page extends StatefulWidget {
   @override
@@ -5,6 +7,8 @@ class amir_restaurant_page extends StatefulWidget {
 }
 
 class _amir_restaurant_pageState extends State<amir_restaurant_page> {
+  bool f = false;
+  bool fx =false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,16 +18,54 @@ class _amir_restaurant_pageState extends State<amir_restaurant_page> {
             fontStyle: FontStyle.italic
         ),),
       ),
-        body: Row(
+        body: ListView(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 100,vertical: 20),
-              child: Container(
-                height: 250,
-                width: 200,
-                child: Image.network("https://cdn1.vectorstock.com/i/1000x1000/81/30/fast-food-restaurant-and-vector-10328130.jpg"),
+              padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 100),
+              child: Image.network(Fake.b.restaurantAvatar),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: ListTile(
+                title: Text("Hamburger",style: TextStyle(
+                    fontSize: 20
+                ),),
+                leading: Container(
+                  child: Image.network(Fake.b.picture),
+                ),
+                trailing: Switch(
+                    value: f,
+                    onChanged: (bool f2){
+                      setState(() {
+                        f=f2;
+                        process.processes.add(Fake.b);
+                      });
+                    },
+                    activeColor: Color(0xff29eb49)
+                ),
               ),
-            )
+            ),
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: ListTile(
+                title: Text("Chicken",style: TextStyle(
+                    fontSize: 20
+                ),),
+                leading: Container(
+                  child: Image.network(Fake.e.picture),
+                ),
+                trailing: Switch(
+                    value: fx,
+                    onChanged: (bool f2){
+                      setState(() {
+                        fx=f2;
+                        process.processes.add(Fake.e);
+                      });
+                    },
+                    activeColor: Color(0xff29eb49)
+                ),
+              ),
+            ),
           ],
         )
     );
