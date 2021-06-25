@@ -52,11 +52,11 @@ class _arman_restaurant_pageState extends State<arman_restaurant_page> {
                                     width: 60,
                                     child: ElevatedButton(
                                       style: ElevatedButton.styleFrom(
-                                        primary: Color(0xff0abbb0),
+                                        primary: liked.arman ? Color(0xffef2a2a) : Color(0xff0abbb0),
                                       ),
                                       onPressed: (){
                                         setState(() {
-                                          liked.liked_restaurants.add("Arman");
+                                          liked.arman=!liked.arman;
                                         });
                                       },
                                       child: Text("Like",style: TextStyle(

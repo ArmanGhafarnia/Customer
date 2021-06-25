@@ -22,7 +22,7 @@ class _restaurant2State extends State<restaurant2> {
                   child: Container(
                     height: 70,
                     width: 80,
-                    child: Image.network("https://cdn1.vectorstock.com/i/1000x1000/81/30/fast-food-restaurant-and-vector-10328130.jpg"),
+                    child: Image.network("https://www.eastbaytimes.com/wp-content/uploads/2019/08/EBT-L-VICTORIA-0810-1.jpg"),
                   ),
                 ),
                 Text("Amir",style: TextStyle(

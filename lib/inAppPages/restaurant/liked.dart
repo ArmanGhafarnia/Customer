@@ -1,3 +1,5 @@
 class liked{
- static List<String> liked_restaurants=[];
+ static bool arman =false;
+ static bool amir = false;
+ static bool rabin = false;
 }
