@@ -6,7 +6,7 @@ class Food extends StatefulWidget{
   String restaurantName;
   String picture;
   String restaurantAvatar;
-  double price;
+  int price;
   bool Process;
   bool active;
   static List<Food> processes = [];

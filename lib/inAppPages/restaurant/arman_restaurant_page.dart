@@ -1,3 +1,4 @@
+import 'package:customer/inAppPages/OrdersPages/OrderBackAndServers/comment.dart';
 import 'package:customer/inAppPages/OrdersPages/process.dart';
 import 'package:customer/inAppPages/food/Food.dart';
 import 'package:customer/inAppPages/food/class%20fake.dart';
@@ -11,7 +12,7 @@ class arman_restaurant_page extends StatefulWidget {
 
 class _arman_restaurant_pageState extends State<arman_restaurant_page> {
   @override
-  List<String> comment =[];
+  List<String> comments =[];
   String com;
   var formy = GlobalKey<FormState>();
   Widget build(BuildContext context) {
@@ -129,7 +130,7 @@ class _arman_restaurant_pageState extends State<arman_restaurant_page> {
                             ),
                           ),
                           Column(
-                            children: List.generate(comment.length, (index) => Text(comment[index]) ) ,
+                            children: List.generate(comments.length, (index) => Text(comments[index]) ) ,
                           )
                         ],
                       ),
@@ -151,6 +152,7 @@ class _arman_restaurant_pageState extends State<arman_restaurant_page> {
                                      TextFormField(
                                        onSaved: (String value){
                                          com = value;
+                                         commentlist.comments.add(com);
                                        },
                                      ),
                                      ElevatedButton(
@@ -158,7 +160,7 @@ class _arman_restaurant_pageState extends State<arman_restaurant_page> {
                                        onPressed: (){
                                            setState(() {
                                              formy.currentState.save();
-                                             comment.add(com);
+                                             comments.add(com);
                                            });
                                          Navigator.pop(context);
                                        },

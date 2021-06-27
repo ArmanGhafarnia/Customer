@@ -1,4 +1,7 @@
 import 'package:customer/ProfileAndUsers/profile.dart';
+import 'package:customer/ProfileAndUsers/users/user.dart';
+import 'package:customer/inAppPages/OrdersPages/OrderBackAndServers/comment.dart';
+import 'package:customer/inAppPages/restaurant/liked.dart';
 import 'package:flutter/material.dart';
 
 class safhe_profile extends StatefulWidget {
@@ -42,7 +45,7 @@ class _safhe_profileState extends State<safhe_profile> {
                        ),
                        onSaved: (String voroodi){
                          int voroodii =int.parse(voroodi);
-                         //  moshtari.credit+=voroodii;
+                         User.users[0].mojoodi+=voroodii;
                        },
                      ),
                        Padding(padding:(EdgeInsets.symmetric(vertical: 10)) ),
@@ -66,7 +69,30 @@ class _safhe_profileState extends State<safhe_profile> {
                              });
                            },
                          ),
-                       )
+                       ),
+                       Padding(
+                         padding: const EdgeInsets.all(8.0),
+                         child: Column(
+                             children: List.generate(commentlist.comments.length, (index) => Text(commentlist.comments[index]) )
+                         ),
+                       ),
+                      Column(
+                        children: [
+                          liked.amir ? Padding(
+                            padding: const EdgeInsets.all(2),
+                            child: Text("amir_restaurant"),
+                          ) : Text("x"),
+                          liked.arman ? Padding(
+                            padding: const EdgeInsets.all(2),
+                            child: Text("arman_restaurant"),
+                          ) : Text("x"),
+                          liked.rabin ? Padding(
+                            padding: const EdgeInsets.all(2),
+                            child: Text("rabin_restaurant"),
+                          ) : Text("x"),
+                        ],
+                      )
+
                      ] ,
                     )
                   )

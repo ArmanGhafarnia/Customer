@@ -1,3 +1,4 @@
+import 'package:customer/inAppPages/OrdersPages/OrderBackAndServers/comment.dart';
 import 'package:customer/inAppPages/OrdersPages/process.dart';
 import 'package:customer/inAppPages/food/Food.dart';
 import 'package:customer/inAppPages/food/class%20fake.dart';
@@ -153,6 +154,7 @@ class _rabin_restaurant_pageState extends State<rabin_restaurant_page> {
                             TextFormField(
                               onSaved: (String value){
                                 com = value;
+                                commentlist.comments.add(com);
                               },
                             ),
                             ElevatedButton(

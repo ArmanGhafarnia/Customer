@@ -1,3 +1,4 @@
+import 'package:customer/ProfileAndUsers/users/user.dart';
 import 'package:customer/inAppPages/OrdersPages/process.dart';
 import 'package:customer/inAppPages/food/Food.dart';
 import 'package:flutter/material.dart';
@@ -50,9 +51,25 @@ class _CartState extends State<Cart> {
               color:Colors.black,),
           onPressed: (){
                setState(() {
-                 double sum=0;
+                 int sum=0;
                  for(int i =0;i<Food.processes.length;i++){
                    sum+=Food.processes[Food.i].price;
+                 }
+                 int andis=0;
+                 for(int i =0;i<User.users.length;i++){
+                   if(User.users[i].use){
+                     andis=i;
+                   }
+                 }
+                 if(User.users[andis].mojoodi-sum>=0) {
+                   User.users[andis].mojoodi = User.users[andis].mojoodi - sum;
+                   for (int i = 0; i < Food.processes.length; i++) {
+                     process.processes[i] = Food.processes[i];
+                   }
+                   Food.processes = [];
+                 }
+                 else{
+                   Navigator.pushNamed(context,"safhe profile");
                  }
                });
           },
