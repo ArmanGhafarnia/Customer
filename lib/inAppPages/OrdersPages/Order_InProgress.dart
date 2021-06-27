@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 // ignore: camel_case_types
 class Order_InProgress extends StatefulWidget {
@@ -22,18 +23,48 @@ class _Order_InProgressState extends State<Order_InProgress> {
           return Column(children: [
             Divider(
               color: index == 0 ? Colors.white : Color(0xffef2a2a),
-              height: screenSize.height * 0.01,
+              height: screenSize.height * 0.02,
+              thickness: 0.7 ,
             ),
             SizedBox(
-                height: screenSize.height * 0.15,
+                height: screenSize.height * 0.1,
                 child: Slidable(
                   actionPane: SlidableDrawerActionPane(),
                   actions: [
                     IconSlideAction(
                       onTap: () {
 
+                        return showDialog(
+                            context: context,
+                            builder: (ctx) => AlertDialog(
+                              title: Text("Receipt" , style: GoogleFonts.palanquinDark(fontSize: 14 ,letterSpacing: 2  , fontWeight: FontWeight.bold  , color: Color(0xffef2a2a) )),
+                              scrollable: true,
+                              content: Container(
+                                height: screenSize.height/4,
+                                width: screenSize.width/3,
+                                child: ListView.builder(
+                                  itemCount:  Order_List.inProgress[index].receipt.foods.length,
+                                    itemBuilder: (context , index )=> Text("- " + Order_List.inProgress[index].receipt.foods[index] ,
+                                      style:  TextStyle(letterSpacing: 2) ),
+                                ),
+                              ),
+                              actions: [
+                                GestureDetector(
 
+                                    onTap: (){
+                                      Navigator.of(ctx).pop();
+                                    },
 
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(bottom : 10),
+                                      child: Text("Ok  " ,  style: GoogleFonts.palanquinDark(fontSize: 18 ,letterSpacing: 2  , fontWeight: FontWeight.bold  , color: Color(0xffef2a2a) ),
+                                ),
+                                    )
+                                )
+                              ],
+
+                            )
+                        );
                       },
                       icon: CupertinoIcons.list_bullet,
                       color: Color(0xffef2a2a),
@@ -42,6 +73,8 @@ class _Order_InProgressState extends State<Order_InProgress> {
                   ],
                   child: ListTile(
                     leading: SizedBox(
+                        height: 50,
+                        width: 50,
                         child: Image.network(
                             Order_List.inProgress[index].restaurantAvatarUrl,
                             fit: BoxFit.fill)),

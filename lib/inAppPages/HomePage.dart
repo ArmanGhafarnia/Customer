@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:customer/inAppPages/restaurant/restaurant.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlng/latlng.dart';
+
+import 'Address/AddressList.dart';
 class HomePage extends StatefulWidget {
   static List location =[];
   static LatLng location1;
@@ -55,16 +57,16 @@ class _HomePageState extends State<HomePage> {
             icon: Icon(Icons.location_on),
             onPressed: () {
 
-              // showModalBottomSheet(
-              //     context: context,
-              //     isScrollControlled: true,
-              //     elevation: 2,
-              //     builder: (context) {
-              //       return FractionallySizedBox(
-              //           heightFactor: 0.91,
-              //           child: AddressList()
-              //       );
-              //     });
+              showModalBottomSheet(
+                  context: context,
+                  isScrollControlled: true,
+                  elevation: 2,
+                  builder: (context) {
+                    return FractionallySizedBox(
+                        heightFactor: 0.91,
+                        child: AddressList()
+                    );
+                  });
 
             },
 

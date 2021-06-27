@@ -8,58 +8,75 @@ class firstPage extends StatefulWidget {
 }
 
 class _firstPageState extends State<firstPage> {
+
+
   @override
   Widget build(BuildContext context) {
+
+    Size screenSize = MediaQuery.of(context).size;
+
     return  Scaffold(
-        backgroundColor: Colors.white,
-        body: Column(
+        backgroundColor: Colors.white ,
+        body: Container(
+              constraints: BoxConstraints.expand(),
+              decoration: BoxDecoration(
+              image: DecorationImage(
+              image: AssetImage("photo/1.png"), fit: BoxFit.cover)
+        ),
+         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+
           children: [
-            Container(
-              child: Image.asset("photo/2.png"),
-              padding: EdgeInsets.fromLTRB(30 , 130, 30, 170)
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Row(
-                  children: [
-                    Icon(Icons.fastfood ,color: Color(0xffef2a2a) , size: 40 ),
-                    Text(" Finger\n Licking Good",
-                      style: TextStyle(
-                          fontSize: 15,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.black
-                      ),
-                    )
-                  ]
-                ),
-                Row(
+
+            Image.asset("photo/2.png" , fit: BoxFit.contain , height: screenSize.height/5   ),
+
+
+            Padding(
+
+              padding: const EdgeInsets.only(top: 45),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Row(
                     children: [
-                      Icon(FontAwesomeIcons.percentage ,color: Color(0xffef2a2a), size: 40 ),
-                      Text(" Great\n Deals & Offer",
+                      Icon(Icons.fastfood ,color: Color(0xffef2a2a) , size: 40 ),
+                      Text(" Finger\n Licking Good",
                         style: TextStyle(
                             fontSize: 15,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.black
+                          fontWeight: FontWeight.w700,
+                          color: Colors.black
                         ),
                       )
                     ]
-                ),
-                Row(
-                    children: [
-                      Icon( FontAwesomeIcons.mobile ,color: Color(0xffef2a2a), size: 40 ),
-                      Text(" Easy\n Ordering",
-                        style: TextStyle(
-                            fontSize: 15,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.black
-                        ),
-                      )
-                    ]
+                  ),
+                  Row(
+                      children: [
+                        Icon(FontAwesomeIcons.percentage ,color: Color(0xffef2a2a), size: 40 ),
+                        Text(" Great\n Deals & Offer",
+                          style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w700,
+                              color: Colors.black
+                          ),
+                        )
+                      ]
+                  ),
+                  Row(
+                      children: [
+                        Icon( FontAwesomeIcons.mobile ,color: Color(0xffef2a2a), size: 40 ),
+                        Text(" Easy\n Ordering",
+                          style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w700,
+                              color: Colors.black
+                          ),
+                        )
+                      ]
 
-                )
-              ],
+                  )
+                ],
 
+              ),
             ),
             Column(
               children: [
@@ -70,7 +87,7 @@ class _firstPageState extends State<firstPage> {
                   child: ElevatedButton(
                     child: Text("Sign up",
                       style: TextStyle(
-                          fontStyle: FontStyle.italic,
+                          fontStyle: FontStyle.normal,
                           fontWeight: FontWeight.w900,
                           fontSize: 18
                       ),
@@ -91,7 +108,7 @@ class _firstPageState extends State<firstPage> {
                     child: Text("Login",
                       style: TextStyle(
                           fontWeight: FontWeight.w900,
-                          fontStyle: FontStyle.italic,
+                          fontStyle: FontStyle.normal,
                           fontSize: 20
                       ),),
                     style: ElevatedButton.styleFrom(
@@ -106,6 +123,7 @@ class _firstPageState extends State<firstPage> {
             )
           ],
         )
+    )
     );
   }
 }

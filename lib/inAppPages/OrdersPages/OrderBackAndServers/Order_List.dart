@@ -1,9 +1,6 @@
 
-
 // ignore: camel_case_types
 class Order_Item {
-
-  String foodName;
 
   String restaurantName;
 
@@ -19,8 +16,8 @@ class Order_Item {
 
 
   Order_Item(
-      { this.foodName,
-        this.restaurantName ,
+
+      { this.restaurantName ,
         this.restaurantAvatarUrl,
         this.orderDate,
         this.orderPrice,
@@ -36,9 +33,9 @@ class Order_Item {
 
 class Receipt {
 
-  String temp ;
+  List<String> foods ;
 
-  Receipt( {this.temp});
+  Receipt( {this.foods});
 
 }
 
@@ -56,13 +53,33 @@ class Receipt {
       orderPrice: 34.5 ,
       orderLocationTitle: "home",
       isActive: true ,
-      receipt: Receipt(temp :"smoky Burger")
+      receipt: Receipt(foods :["smoky Burger      \$34.5"])
     )
 
   ];
 
 
    static List<Order_Item> done = [
+
+     Order_Item(
+         restaurantName: "BurgerKing" ,
+         restaurantAvatarUrl: "https://cdn.minorfood.com/uploaded/brand/logo/large/1614828210604052b2c4b7d.png" ,
+         orderDate: DateTime.now(),
+         orderPrice: 34.5 ,
+         orderLocationTitle: "home",
+         isActive: true ,
+         receipt: Receipt(foods :["smoky Burger      \$34.5"])
+     ),
+
+     Order_Item(
+         restaurantName: "BurgerKing" ,
+         restaurantAvatarUrl: "https://cdn.minorfood.com/uploaded/brand/logo/large/1614828210604052b2c4b7d.png" ,
+         orderDate: DateTime.now(),
+         orderPrice: 34.5 ,
+         orderLocationTitle: "home",
+         isActive: true ,
+         receipt: Receipt(foods :["smoky Burger      \$34.5"])
+     )
 
    ];
 
