@@ -54,26 +54,22 @@ class _HomePageState extends State<HomePage> {
           IconButton(
             icon: Icon(Icons.location_on),
             onPressed: () {
-              showModalBottomSheet(context: context, builder: (context)=>SizedBox(
-                child: FlutterMap(
-                  options: MapOptions(
-                      zoom: 13.0,
-                   //   onTap: _handleTap
-                  ),
-                  layers: [
-                    TileLayerOptions(
-                      urlTemplate:
-                      "https://api.mapbox.com/styles/v1/arighafarnia/ckqey7waj1wn318s238qpqpt9/wmts?access_token=pk.eyJ1IjoiYXJpZ2hhZmFybmlhIiwiYSI6ImNrcWV5M3ltZDBzNnEycHBod3NnOGRhM2kifQ.tDReyl5U6R_wAVgJkqSorw",
-                    ),
-                    MarkerLayerOptions(markers: markers)
-                  ],
-                ),
-              ));
+
+              // showModalBottomSheet(
+              //     context: context,
+              //     isScrollControlled: true,
+              //     elevation: 2,
+              //     builder: (context) {
+              //       return FractionallySizedBox(
+              //           heightFactor: 0.91,
+              //           child: AddressList()
+              //       );
+              //     });
 
             },
-            padding: EdgeInsets.only(right: screenSize.width * 0.03),
-            iconSize: screenSize.width * 0.07,
-            tooltip: ' Manage \n Address ',
+
+            padding : EdgeInsets.only(right: screenSize.width * 0.01),
+            iconSize: screenSize.width * 0.05,
 
           )
         ],
