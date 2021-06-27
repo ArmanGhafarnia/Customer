@@ -88,7 +88,7 @@ class _rabin_restaurant_pageState extends State<rabin_restaurant_page> {
                 onTap: (){
                   setState(() {
                     Food a = new Food(name: "pizza",restaurantName: "rabin_restaurant",picture: "https://www.aislac.org/wp-content/uploads/2021/01/pizza.jpg",restaurantAvatar: "https://cdn1.vectorstock.com/i/1000x1000/33/80/fast-food-shop-store-front-flat-style-vector-9183380.jpg",price: 20000,Process: false,active: false);
-                    process.processes.add(a);
+                    Food.processes.add(a);
                   });
                 },
               ),
@@ -106,7 +106,7 @@ class _rabin_restaurant_pageState extends State<rabin_restaurant_page> {
                 onTap: (){
                   setState(() {
                     Food p = new Food(name: "pop corn",restaurantName: "rabin_restaurant",picture: "https://www.rachelpaulsfood.com/wp-content/uploads/DSC_0697.jpg",restaurantAvatar: "https://cdn1.vectorstock.com/i/1000x1000/33/80/fast-food-shop-store-front-flat-style-vector-9183380.jpg",price: 3000,Process: false,active: false);
-                    process.processes.add(p);
+                    Food.processes.add(p);
                   });
                 },
               ),
@@ -125,7 +125,7 @@ class _rabin_restaurant_pageState extends State<rabin_restaurant_page> {
                 onTap: (){
                   setState(() {
                     Food c = new Food(name: "crab",restaurantName: "rabin_restaurant",picture: "https://media-cdn.tripadvisor.com/media/photo-s/0e/33/ee/e7/crabe.jpg",restaurantAvatar: "https://cdn1.vectorstock.com/i/1000x1000/33/80/fast-food-shop-store-front-flat-style-vector-9183380.jpg",price: 23000,Process: false,active: false);
-                    process.processes.add(c);
+                    Food.processes.add(c);
                   });
                 },
               ),

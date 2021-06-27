@@ -1,3 +1,5 @@
+import 'package:customer/inAppPages/OrdersPages/process.dart';
+import 'package:customer/inAppPages/food/Food.dart';
 import 'package:flutter/material.dart';
 
 class Cart extends StatefulWidget {
@@ -8,10 +10,26 @@ class Cart extends StatefulWidget {
 class _CartState extends State<Cart> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 200,
-      width: 300,
-      child: Image.network("https://themes.muffingroup.com/be/pizza/wp-content/uploads/2014/09/home_pizza_slider_1.png"),
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color(0xffef2a2a),
+        title: Padding(
+          padding: const EdgeInsets.all(100),
+          child: Text("Cart",style: TextStyle(
+            fontStyle: FontStyle.italic,
+            fontWeight: FontWeight.w600,
+            fontSize: 25
+          ),),
+        ),
+      ),
+      body: ListView.builder(
+        itemCount:  process.processes.length,
+        itemBuilder: (BuildContext context,int index){
+          return Container(
+            child: process.processes[index],
+          );
+        }
+    ),
     );
   }
 }

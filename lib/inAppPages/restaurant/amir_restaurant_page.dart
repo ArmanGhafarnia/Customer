@@ -86,7 +86,7 @@ class _amir_restaurant_pageState extends State<amir_restaurant_page> {
                 onTap: (){
                   setState(() {
                     Food a = new Food(name:"hamburger",restaurantName:"amir_restaurant",picture:"https://assets.epicurious.com/photos/57c5c6d9cf9e9ad43de2d96e/master/pass/the-ultimate-hamburger.jpg",restaurantAvatar:"https://cdn1.vectorstock.com/i/1000x1000/81/30/fast-food-restaurant-and-vector-10328130.jpg",price: 15000,Process: false,active: false);
-                    process.processes.add(a);
+                    Food.processes.add(a);
                   });
                 },
               ),
@@ -104,7 +104,7 @@ class _amir_restaurant_pageState extends State<amir_restaurant_page> {
                 onTap: (){
                   setState(() {
                     Food d = new Food(name: "chicken",restaurantName: "amir_restaurant",picture: "https://www.seriouseats.com/thmb/hGmf-CklPEWYtGrsB1XIOfldngM=/1500x844/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2015__07__20210324-SouthernFriedChicken-Andrew-Janjigian-21-cea1fe39234844638018b15259cabdc2.jpg",restaurantAvatar:"https://cdn1.vectorstock.com/i/1000x1000/81/30/fast-food-restaurant-and-vector-10328130.jpg",price: 30000,Process: false,active: false);
-                    process.processes.add(d);
+                    Food.processes.add(d);
                   });
                 },
               ),
@@ -123,7 +123,7 @@ class _amir_restaurant_pageState extends State<amir_restaurant_page> {
                 onTap: (){
                   setState(() {
                     Food g = new Food(name: "fish",restaurantName: "amir_restaurant",picture: "https://img.etimg.com/thumb/msid-68495044,width-1070,height-580,imgsize-1335371,overlay-etpanache/photo.jpg",restaurantAvatar: "https://cdn1.vectorstock.com/i/1000x1000/81/30/fast-food-restaurant-and-vector-10328130.jpg",price: 40000,Process: false,active: false);
-                    process.processes.add(g);
+                   Food.processes.add(g);
                   });
                 },
               ),

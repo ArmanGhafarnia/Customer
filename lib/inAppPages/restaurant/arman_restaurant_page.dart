@@ -86,7 +86,7 @@ class _arman_restaurant_pageState extends State<arman_restaurant_page> {
                               onTap: (){
                                 setState(() {
                                   Food a = new Food(name:"hot dog",restaurantName:"arman_restaurant",picture:"https://upload.wikimedia.org/wikipedia/commons/b/b1/Hot_dog_with_mustard.png",restaurantAvatar:"https://media-cdn.tripadvisor.com/media/photo-s/1b/67/cc/f8/chestnut-restaurant.jpg",price: 12000,Process: false,active: false);
-                                  process.processes.add(a);
+                                  Food.processes.add(a);
                                 });
                               },
                             ),
@@ -104,7 +104,7 @@ class _arman_restaurant_pageState extends State<arman_restaurant_page> {
                              onTap: (){
                                 setState(() {
                                   Food d = new Food(name: "french fries",restaurantName: "arman_restaurant",picture: "https://shoolenco.com/en/wp-content/uploads/sites/4/2018/09/french-fries88.jpg",restaurantAvatar:"https://media-cdn.tripadvisor.com/media/photo-s/1b/67/cc/f8/chestnut-restaurant.jpg",price: 10000,Process: false,active: false );
-                                  process.processes.add(d);
+                                  Food.processes.add(d);
                                 });
                              },
                             ),
@@ -123,7 +123,7 @@ class _arman_restaurant_pageState extends State<arman_restaurant_page> {
                               onTap: (){
                                 setState(() {
                                   Food g = new Food(name : "kebab" , restaurantName: "arman_restaurant",picture: "https://media.mehrnews.com/d/2019/07/09/4/3175131.jpg",restaurantAvatar: "https://media-cdn.tripadvisor.com/media/photo-s/1b/67/cc/f8/chestnut-restaurant.jpg",price: 17000,Process: false,active: false);
-                                  process.processes.add(g);
+                                  Food.processes.add(g);
                                 });
                               },
                             ),
