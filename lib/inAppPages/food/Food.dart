@@ -29,6 +29,7 @@ class Food extends StatefulWidget{
 class __sefaresh extends State<Food> {
   @override
   Widget build(BuildContext context) {
+    Food.i++;
     return Container(
       child: Column(
         children: [

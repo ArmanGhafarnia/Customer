@@ -3,14 +3,45 @@ import 'package:customer/inAppPages/restaurant/restaurant3.dart';
 import 'package:customer/inAppPages/restaurant/restaurant_class.dart';
 import 'package:flutter/material.dart';
 import 'package:customer/inAppPages/restaurant/restaurant.dart';
+import 'package:flutter_map/flutter_map.dart';
+import 'package:latlng/latlng.dart';
 class HomePage extends StatefulWidget {
+  static List location =[];
+  static LatLng location1;
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
+
   @override
   Widget build(BuildContext context) {
+    var markers = HomePage.location.map((latlng) {
+      return Marker(
+        width: 80.0,
+        height: 80.0,
+        point: latlng,
+        builder: (ctx) => Container(
+          child: Icon(
+            Icons.location_on,
+            size: 50,
+            color: Colors.red,
+          ),
+        ),
+      );
+    }).toList();
+    void _handleTap(LatLng latlng) {
+      setState(() {
+        if (HomePage.location.isEmpty) {
+          HomePage.location.add(latlng);
+        } else {
+          HomePage.location.clear();
+          HomePage.location.add(latlng);
+        }
+        HomePage.location1 = latlng;
+        print(HomePage.location);
+      });
+    }
     Size screenSize = MediaQuery.of(context).size;
 
     return Scaffold(
@@ -23,7 +54,22 @@ class _HomePageState extends State<HomePage> {
           IconButton(
             icon: Icon(Icons.location_on),
             onPressed: () {
-              print("hi");
+              showModalBottomSheet(context: context, builder: (context)=>SizedBox(
+                child: FlutterMap(
+                  options: MapOptions(
+                      zoom: 13.0,
+                   //   onTap: _handleTap
+                  ),
+                  layers: [
+                    TileLayerOptions(
+                      urlTemplate:
+                      "https://api.mapbox.com/styles/v1/arighafarnia/ckqey7waj1wn318s238qpqpt9/wmts?access_token=pk.eyJ1IjoiYXJpZ2hhZmFybmlhIiwiYSI6ImNrcWV5M3ltZDBzNnEycHBod3NnOGRhM2kifQ.tDReyl5U6R_wAVgJkqSorw",
+                    ),
+                    MarkerLayerOptions(markers: markers)
+                  ],
+                ),
+              ));
+
             },
             padding: EdgeInsets.only(right: screenSize.width * 0.03),
             iconSize: screenSize.width * 0.07,
@@ -248,4 +294,5 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+
 }
