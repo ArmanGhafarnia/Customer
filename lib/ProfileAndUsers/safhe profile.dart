@@ -80,6 +80,7 @@ class _safhe_profileState extends State<safhe_profile> {
     return MaterialApp(
       home: Scaffold(
         appBar:  AppBar(
+          backgroundColor: Color(0xffef2a2a),
           backwardsCompatibility: true,
           elevation: 1,
           centerTitle: true,
