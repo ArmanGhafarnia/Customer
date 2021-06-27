@@ -1,3 +1,4 @@
+import 'package:customer/ProfileAndUsers/safhe%20profile.dart';
 import 'package:customer/inAppPages/restaurant/amir_restaurant_page.dart';
 import 'package:customer/inAppPages/restaurant/arman_restaurant_page.dart';
 import 'package:customer/inAppPages/restaurant/restaurant.dart';
@@ -40,6 +41,7 @@ class _myappState extends State<myapp> {
         "arman_restaurant_page" : (context)=> arman_restaurant_page(),
         "amir_restaurant_page" : (context)=> amir_restaurant_page(),
         "rabin_restaurant_page" : (context)=> rabin_restaurant_page(),
+        "safhe profile" : (context)=> safhe_profile(),
       },
       home: splash_Screen(),
     );

@@ -10,7 +10,7 @@ class Food extends StatefulWidget{
   bool Process;
   bool active;
   static List<Food> processes = [];
-  static int i = 0;
+  static int i = -1;
   Food({
     this.name,
     this.restaurantName,
@@ -41,21 +41,10 @@ class __sefaresh extends State<Food> {
                         fontWeight: FontWeight.w500
                     ),),
                   subtitle: Text(Food.processes[Food.i].price.toString(),
-                    style: TextStyle(
-                        color: Colors.white12
-                    ),),
+                    ),
                   leading: Container(
                     child: Image.network(Food.processes[Food.i].picture),
                   ),
-                  trailing: Switch(
-                    activeColor: Colors.green,
-                    value:Food.processes[Food.i].active,
-                    onChanged: (bool x) {
-                      setState(() {
-                       Food.processes[Food.i].active = x ;
-                      });
-                    },
-                  )
               )
           )
         ],

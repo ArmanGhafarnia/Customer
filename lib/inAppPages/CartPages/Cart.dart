@@ -22,14 +22,43 @@ class _CartState extends State<Cart> {
           ),),
         ),
       ),
+      drawer: Drawer(
+        child: ElevatedButton(
+          onPressed: (){
+            setState(() {
+              Food.processes=[];
+            });
+          },
+          style: ElevatedButton.styleFrom(
+            primary: Color(0xff0abbb0),
+          ),
+          child: Text("delete"),
+        ),
+      ),
       body: ListView.builder(
-        itemCount:  process.processes.length,
+        itemCount:  Food.processes.length,
         itemBuilder: (BuildContext context,int index){
           return Container(
-            child: process.processes[index],
+            child: Food.processes[index],
           );
         }
     ),
+      floatingActionButton: Builder(
+        builder: (context)=>FloatingActionButton(
+             backgroundColor: Color(0xff29eb49),
+            child: Icon(Icons.add,
+              color:Colors.black,),
+          onPressed: (){
+               setState(() {
+                 double sum=0;
+                 for(int i =0;i<Food.processes.length;i++){
+                   sum+=Food.processes[Food.i].price;
+                 }
+               });
+          },
+        ),
+      )
+
     );
   }
 }

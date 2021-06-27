@@ -78,7 +78,19 @@ class _HomePageState extends State<HomePage> {
           )
         ],
       ),
-      drawer: Drawer(),
+      drawer: Drawer(
+        child: ElevatedButton(
+          onPressed: (){
+            setState(() {
+              Navigator.pushNamed(context,"safhe profile");
+            });
+          },
+       style: ElevatedButton.styleFrom(
+        primary: Color(0xffef2a2a),
+        ),
+       child: Text("Profile"),
+      ),
+      ),
       body: ListView(
         children: [
           reastaurant(),
