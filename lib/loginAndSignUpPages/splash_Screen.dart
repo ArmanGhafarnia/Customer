@@ -11,7 +11,7 @@ class splash_Screen extends StatefulWidget {
 
 // ignore: camel_case_types
 class _splash_ScreenState extends State<splash_Screen> {
-  bool token = true;
+  bool token = !true;
 
   startTime() {
     var _duration = Duration(seconds: 5);

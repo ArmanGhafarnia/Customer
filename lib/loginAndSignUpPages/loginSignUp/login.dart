@@ -101,6 +101,7 @@ class _LoginState extends State<Login> {
                         if(key.currentState.validate())
                           setState(() {
                             key.currentState.save();
+                            Navigator.pushNamed(context,"main page");
                           });
 
                       },
